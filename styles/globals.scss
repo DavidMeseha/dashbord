@@ -1,0 +1,119 @@
+* {
+    color: #303030;
+}
+
+canvas {
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+//............................
+//nav bar Style ..............
+//............................
+
+.toggle svg path,
+.navItem svg path {
+    fill: #cbcbcb;
+    transition: all 0.3s;
+}
+
+.navItem,
+.toggle {
+    padding: 17px;
+    cursor: pointer;
+
+    &:hover {
+        path {
+            fill: #303030;
+        }
+    }
+}
+
+.toggle {
+    transform: rotate(90deg) translate(0px, 5px);
+    transition: all 0.2s;
+
+    &:hover {
+        transform: rotate(90deg) translate(0px, 0px);
+    }
+}
+
+//...............................
+//Summary Section................
+//...............................
+
+.section1 {
+    grid-area: section1;
+}
+
+.section2 {
+    grid-area: section2;
+}
+
+.section3 {
+    grid-area: section3;
+}
+
+.section4 {
+    grid-area: section4;
+}
+
+.summary-grid-container {
+    display: grid;
+    grid-template-areas: 'section1 section2 section3 section4';
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+
+    @media screen and (max-width:768px) {
+        grid-template-areas: 'section1 section1 section2 section2'
+            'section3 section3 section4 section4';
+    }
+
+    @media screen and (max-width:426px) {
+        grid-template-areas: 'section1 section1 section1 section1'
+            'section2 section2 section2 section2'
+            'section3 section3 section3 section3'
+            'section4 section4 section4 section4';
+    }
+}
+
+.summary-section {
+    width: 100%;
+    height: 90px;
+    background: white;
+    font-weight: bold;
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.counter-container {
+    width: max-content;
+    margin: auto;
+    font-size: 25px;
+
+    span {
+        color: #ef9700;
+    }
+}

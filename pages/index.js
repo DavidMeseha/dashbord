@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import NavBar from '../components/NavBar'
 import Container from '../components/Container'
-import Header from '../components/header'
+import Header from '../components/Header'
 import { GainChart } from "../components/Charts"
 import { data } from '../data/displayData'
 import Summary from '../components/Summary'

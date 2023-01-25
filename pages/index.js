@@ -19,11 +19,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div style={{ position: 'fixed', top: 0, bottom: 0 }}>
+            <div className={`${inter.className}`} style={{ position: 'fixed', top: 0, bottom: 0, transform: 'translate(-55px,0)' }}>
                 <NavBar />
             </div>
 
-            <main className={inter.className} style={{ margin: '15px 20px 0 75px' }}>
+            <main className={`${inter.className} main-container`}>
                 <div>
                     <Header />
                 </div>

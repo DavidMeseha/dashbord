@@ -27,6 +27,25 @@ p {
     margin: 0;
 }
 
+.main-container {
+    margin: 15px 15px 0 70px;
+    position: relative;
+    z-index: -3;
+
+    @media screen and (max-width:426px) {
+        margin: 10px 10px 0 10px;
+    }
+}
+
+.minue-icon {
+    display: none;
+    cursor: pointer;
+
+    @media screen and (max-width:426px) {
+        display: block;
+    }
+}
+
 //............................
 //nav bar Style ..............
 //............................

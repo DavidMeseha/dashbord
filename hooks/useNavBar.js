@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { NavProvider } from "../context/NavStateProvider";
+import NavContext from "../context/NavStateProvider";
 
 const UseNavBar = () => {
-    return (useContext(NavProvider))
+    return (useContext(NavContext))
 };
 export default UseNavBar;

@@ -5,14 +5,22 @@ const NavContext = createContext({})
 export const NavProvider = ({ children }) => {
     const [state, setState] = useState(true)
 
+    const toggleNavBar = () => {
+        if (window.innerWidth > 425) return
+
+        if (state) setState(false)
+        else setState(true)
+    }
+
     useEffect(() => {
         if (window.innerWidth > 425) setState(false)
-    }, [window.innerWidth])
+        else setState(true)
+    }, [])
 
     return (
-        <NavBar.Provider value={{state, setState}}>
+        <NavContext.Provider value={{ state, toggleNavBar, setState }}>
             {children}
-        </NavBar.Provider>
+        </NavContext.Provider>
     )
 }
 

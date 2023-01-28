@@ -19,10 +19,6 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className={`${inter.className}`} style={{ position: 'fixed', top: 0, bottom: 0, transform: 'translate(-55px,0)' }}>
-                <NavBar />
-            </div>
-
             <main className={`${inter.className} main-container`}>
                 <div>
                     <Header />

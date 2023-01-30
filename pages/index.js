@@ -2,10 +2,11 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import NavBar from '../components/NavBar'
 import Container from '../components/Container'
-import Header from '../components/Header'
+import Header from '../components/header'
 import { GainChart } from "../components/Charts"
 import { data } from '../data/displayData'
 import Summary from '../components/Summary'
+import PercentageBar from '../components/PercentageBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,8 +31,19 @@ export default function Home() {
 
                 <div>
                     <div>
-                        <Container>
-                            <GainChart data={data} />
+                        <Container title={'Gain'}>
+                            <div style={{ width: '75%', height: 'inherit' }}>
+                                <GainChart data={data} />
+                            </div>
+                            <div style={{ width: '25%', padding: '0 0 0 5%' }}>
+                                <div><h4>Some Bars</h4></div>
+                                <div style={{ width: '100%' }}>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'all'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
+                                </div>
+                            </div>
                         </Container>
                     </div>
                 </div>

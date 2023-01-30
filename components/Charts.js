@@ -13,13 +13,22 @@ export const GainChart = ({ data }) => {
     useState(() => {
         setChartData({
             labels: data.map((itm) => itm.year),
-            datasets: [{
-                label: 'Gain',
-                data: data.map((itm) => itm.gain),
-                backgroundColor: [
-                    '#ef9700',
-                ],
-            }]
+            datasets: [
+                {
+                    label: 'Gain',
+                    data: data.map((itm) => itm.gain),
+                    backgroundColor: [
+                        '#ef9700',
+                    ],
+                },
+                {
+                    label: 'Loss',
+                    data: data.map((itm) => itm.loss),
+                    backgroundColor: [
+                        '#efc949',
+                    ],
+                },
+            ]
         })
 
         setOptions({

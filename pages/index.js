@@ -39,9 +39,9 @@ export default function Home() {
                                 <div><h4>Some Bars</h4></div>
                                 <div style={{ width: '100%' }}>
                                     <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'all'} /></div>
-                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
-                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
-                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={50} label={'a'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={10} label={'a'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={70} label={'a'} /></div>
+                                    <div style={{ margin: 5 }}><PercentageBar max={100} value={48} label={'a'} /></div>
                                 </div>
                             </div>
                         </Container>
